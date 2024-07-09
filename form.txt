@@ -1,0 +1,60 @@
+<html>
+    <body>
+        <form method="post" action="">
+            <table>
+                <tr>
+                    <td>
+                        <label>Name</label>
+                    </td>
+                    <td>
+                        <input name="student_name" id="student_name" placeholder="Enter your name" >
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td>
+                        <label>Matric Number</label>
+                    </td>
+                    <td>
+                        <input name="matric_number" id="matric_number" placeholder="Enter your matric number">
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td>
+                        <label>Department</label>
+                    </td>
+                    <td>
+                        <select name="department" id="department">
+                            <option selected disabled>Select Department</option>
+                            <option>CSE</option>
+                            <option>EEE</option>
+                            <option>CCE</option>
+                            <option>BBA</option>
+                            <option>ELL</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td>
+                        <label>Gender</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id=gender_male">Male
+                        <input type="radio" name="gender" id="gender_female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Save">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        
+        
+        
+        
+    </body>
+</html>

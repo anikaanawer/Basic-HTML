@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+            <table>
+                <tr>
+                    <td>First Number</td>
+                    <td>
+                        <input name="firstNumber" id="firstNumber" placeholder="Enter First Number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Second Number</td>
+                    <td>
+                        <input name="secondNumber" id="secondNumber" placeholder="Enter Second Number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="result_level">Result</span>
+                        <span style="display:none" id="loop_result_level">Loop Result</span>
+                        <span style="display:none" id="addition_result_level">Addition Result</span>
+                        <span style="display:none" id="subtraction_result_level">Subtraction Result</span>
+                        <span style="display:none" id="multiplication_result_level">Multiplication Result</span>
+                        <span style="display:none" id="division_result_level">Division Result</span>
+                    </td>
+                    <td>
+                        <input name="Result" id="result">
+                    </td>
+                </tr>
+                <tr>
+                    <td><button onclick="addition()">Addition</button></td>
+                    <td>
+                        <button onclick="subtraction()">Subtraction</button>
+                    </td>
+                    <td>
+                        <button onclick="multiplication()">Multiplication</button>
+                    </td>
+                    <td>
+                        <button onclick="division()">Division</button>
+                    </td>
+                    <td>
+                        <button id="loopButton" onclick="loop_operation()">Loop</button>
+                    </td>
+                </tr>
+            </table>
+    </body>
+    <script>
+        function loop_operation()
+        {
+            document.getElementById('result_level').style.display='none';
+            document.getElementById('loop_result_level').style.display='block';
+            document.getElementById('addition_result_level').style.display='none';
+            document.getElementById('subtraction_result_level').style.display='none';
+            document.getElementById('multiplication_result_level').style.display='none';
+            document.getElementById('division_result_level').style.display='none';
+
+            var firstNumber= document.getElementById('firstNumber').value;
+            var secondNumber= document.getElementById('secondNumber').value;
+            var result=0;
+            for(var index=Number(firstNumber);index<=Number(secondNumber);index++)
+            {
+                result+=index;
+            }
+            if(result<=40)
+            {
+                document.getElementById('result').style.backgroundColor='red';
+            }
+            else if(result>=41 && result<=60)
+            {
+                document.getElementById('result').style.backgroundColor='yellow';
+            }
+            else if(result>=61 && result<80)
+            {
+                document.getElementById('result').style.backgroundColor='orange';
+            }
+            else if(result>=80)
+            {
+                document.getElementById('result').style.backgroundColor='green';
+            }
+            document.getElementById('result').value=result;
+            document.getElementById('loopButton').style.backgroundColor='red';
+        }
+        function addition()
+        {
+            document.getElementById('result_level').style.display='none';
+            document.getElementById('loop_result_level').style.display='none';
+            document.getElementById('addition_result_level').style.display='block';
+            document.getElementById('subtraction_result_level').style.display='none';
+            document.getElementById('multiplication_result_level').style.display='none';
+            document.getElementById('division_result_level').style.display='none';
+            //alert("Hello world");
+            //document.write("Hello  world");
+            //confirm("Do you wanna allow");
+            var firstNumber= document.getElementById('firstNumber').value;
+            var secondNumber= document.getElementById('secondNumber').value;
+            let result=Number(firstNumber)+Number(secondNumber);
+            document.getElementById('result').value=result;
+            console.log(Number(firstNumber)+Number(secondNumber));
+        }
+        function subtraction()
+        {
+            document.getElementById('result_level').style.display='none';
+            document.getElementById('loop_result_level').style.display='none';
+            document.getElementById('addition_result_level').style.display='none';
+            document.getElementById('subtraction_result_level').style.display='block';
+            document.getElementById('multiplication_result_level').style.display='none';
+            document.getElementById('division_result_level').style.display='none';
+            //alert("Hello world");
+            //console.log("Hello world");
+            //confirm("Do you wanna allow");
+            var firstNumber= document.getElementById('firstNumber').value;
+            var secondNumber= document.getElementById('secondNumber').value;
+            let result=Number(firstNumber)-Number(secondNumber);
+            document.getElementById('result').value=result;
+            console.log(Number(firstNumber)-Number(secondNumber));
+        }
+        function multiplication()
+        {
+            document.getElementById('result_level').style.display='none';
+            document.getElementById('loop_result_level').style.display='none';
+            document.getElementById('addition_result_level').style.display='none';
+            document.getElementById('subtraction_result_level').style.display='none';
+            document.getElementById('multiplication_result_level').style.display='block';
+            document.getElementById('division_result_level').style.display='none';
+            //alert("Hello world");
+            //console.log("Hello world");
+            //confirm("Do you wanna allow");
+            var firstNumber= document.getElementById('firstNumber').value;
+            var secondNumber= document.getElementById('secondNumber').value;
+            let result=Number(firstNumber)*Number(secondNumber);
+            document.getElementById('result').value=result;
+            console.log(Number(firstNumber)*Number(secondNumber));
+        }
+        function division()
+        {
+            document.getElementById('result_level').style.display='none';
+            document.getElementById('loop_result_level').style.display='none';
+            document.getElementById('addition_result_level').style.display='none';
+            document.getElementById('subtraction_result_level').style.display='none';
+            document.getElementById('multiplication_result_level').style.display='none';
+            document.getElementById('division_result_level').style.display='block';
+            //alert("Hello world");
+            //console.log("Hello world");
+            //confirm("Do you wanna allow");
+            var firstNumber= document.getElementById('firstNumber').value;
+            var secondNumber= document.getElementById('secondNumber').value;
+            let result=Number(firstNumber)/Number(secondNumber);
+            document.getElementById('result').value=result;
+            console.log(Number(firstNumber)/Number(secondNumber));
+        }
+    </script>
+</html>
